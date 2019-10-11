@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ims-t8-1VQ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="RXb-bR-TCS">
+            <objects>
+                <navigationController id="Ims-t8-1VQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ztt-y3-6Ae">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2n7-6L-m14"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCX-tp-kDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-799" y="94"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="cineApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cinema-1" translatesAutoresizingMaskIntoConstraints="NO" id="fzd-ng-Syu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cineapp" translatesAutoresizingMaskIntoConstraints="NO" id="zre-zL-6rq">
+                                <rect key="frame" x="87" y="217" width="240" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="VEi-Q0-IOI"/>
+                                    <constraint firstAttribute="height" constant="113" id="xHt-7w-De8"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vLa-Eu-ewq">
+                                <rect key="frame" x="87" y="370" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BSg-GQ-BuH"/>
+                                    <constraint firstAttribute="width" constant="240" id="oAn-mq-p1O"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ME-Yb-VDg">
+                                <rect key="frame" x="87" y="454" width="240" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EwF-l6-G90"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhu-Lg-wl0">
+                                <rect key="frame" x="169" y="512" width="76" height="30"/>
+                                <state key="normal" title="Criar conta">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="criarConta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFp-Op-X6u"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wup-wO-bbi">
+                                <rect key="frame" x="87" y="412" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3ME-Yb-VDg" firstAttribute="trailing" secondItem="Wup-wO-bbi" secondAttribute="trailing" id="5mM-Qr-tnu"/>
+                            <constraint firstItem="zre-zL-6rq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8zl-qi-a6n"/>
+                            <constraint firstItem="Wup-wO-bbi" firstAttribute="centerX" secondItem="vLa-Eu-ewq" secondAttribute="centerX" id="Ao1-ke-trc"/>
+                            <constraint firstAttribute="bottom" secondItem="fzd-ng-Syu" secondAttribute="bottom" id="BF4-BA-XKS"/>
+                            <constraint firstItem="Wup-wO-bbi" firstAttribute="top" secondItem="vLa-Eu-ewq" secondAttribute="bottom" constant="12" id="CEs-Il-r8v"/>
+                            <constraint firstItem="vLa-Eu-ewq" firstAttribute="top" secondItem="zre-zL-6rq" secondAttribute="bottom" constant="40" id="Cor-Ol-fub"/>
+                            <constraint firstItem="fzd-ng-Syu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DXj-TK-ByP"/>
+                            <constraint firstItem="3ME-Yb-VDg" firstAttribute="centerX" secondItem="Wup-wO-bbi" secondAttribute="centerX" id="G4N-Xl-loh"/>
+                            <constraint firstItem="vLa-Eu-ewq" firstAttribute="centerX" secondItem="zre-zL-6rq" secondAttribute="centerX" id="ION-eE-je2"/>
+                            <constraint firstItem="3ME-Yb-VDg" firstAttribute="leading" secondItem="Wup-wO-bbi" secondAttribute="leading" id="JeJ-5V-fgb"/>
+                            <constraint firstItem="qhu-Lg-wl0" firstAttribute="top" secondItem="3ME-Yb-VDg" secondAttribute="bottom" constant="28" id="NUd-4J-tyK"/>
+                            <constraint firstAttribute="trailing" secondItem="fzd-ng-Syu" secondAttribute="trailing" id="VGJ-AO-Jp1"/>
+                            <constraint firstItem="zre-zL-6rq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="Wmr-70-Hhf"/>
+                            <constraint firstItem="qhu-Lg-wl0" firstAttribute="centerX" secondItem="3ME-Yb-VDg" secondAttribute="centerX" id="bqh-yU-Iqu"/>
+                            <constraint firstItem="fzd-ng-Syu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nBy-WY-q1P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qhu-Lg-wl0" secondAttribute="bottom" constant="16" id="nQV-f2-xCh"/>
+                            <constraint firstItem="fzd-ng-Syu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qqK-xM-h9q"/>
+                            <constraint firstItem="3ME-Yb-VDg" firstAttribute="top" secondItem="Wup-wO-bbi" secondAttribute="bottom" constant="12" id="sIt-VV-hte"/>
+                            <constraint firstItem="Wup-wO-bbi" firstAttribute="leading" secondItem="vLa-Eu-ewq" secondAttribute="leading" id="zem-v5-9R2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PHx-a4-3Ru"/>
+                    <connections>
+                        <outlet property="btnLogin" destination="3ME-Yb-VDg" id="xYp-AM-VkT"/>
+                        <outlet property="emailField" destination="vLa-Eu-ewq" id="E3Y-8T-pIj"/>
+                        <outlet property="passwordField" destination="Wup-wO-bbi" id="Icd-1z-0gQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cineapp" width="113" height="113"/>
+        <image name="cinema-1" width="4000" height="2233"/>
+    </resources>
+</document>

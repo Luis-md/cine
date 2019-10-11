@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Criar Conta View Controller-->
+        <scene sceneID="Vr4-t7-vJt">
+            <objects>
+                <viewController storyboardIdentifier="CriarContaViewController" id="Bf1-LE-b8t" customClass="CriarContaViewController" customModule="cineApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NxE-nE-cdv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cinemaRegistro" translatesAutoresizingMaskIntoConstraints="NO" id="MYz-rX-Mr7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAk-SD-pVw">
+                                <rect key="frame" x="100" y="244" width="214" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2YC-hr-BdQ"/>
+                                    <constraint firstAttribute="width" constant="214" id="BtE-aX-DLI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HUc-B8-CUr">
+                                <rect key="frame" x="100" y="290" width="214" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="eB7-hR-U5E"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpw-pD-ocn">
+                                <rect key="frame" x="100" y="348" width="214" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Registrar">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registrarBtn:" destination="Bf1-LE-b8t" eventType="touchUpInside" id="tyb-YK-HIw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mAk-SD-pVw" firstAttribute="centerX" secondItem="StB-xH-WEk" secondAttribute="centerX" id="5Gv-wV-KeD"/>
+                            <constraint firstItem="HUc-B8-CUr" firstAttribute="centerX" secondItem="mAk-SD-pVw" secondAttribute="centerX" id="7oE-qO-JKa"/>
+                            <constraint firstItem="HUc-B8-CUr" firstAttribute="leading" secondItem="mAk-SD-pVw" secondAttribute="leading" id="BDf-iY-e01"/>
+                            <constraint firstAttribute="bottom" secondItem="MYz-rX-Mr7" secondAttribute="bottom" id="DlM-bq-Ost"/>
+                            <constraint firstItem="dpw-pD-ocn" firstAttribute="top" secondItem="HUc-B8-CUr" secondAttribute="bottom" constant="28" id="FhI-8Q-hBN"/>
+                            <constraint firstItem="mAk-SD-pVw" firstAttribute="top" secondItem="StB-xH-WEk" secondAttribute="top" constant="200" id="HEW-f0-VfL"/>
+                            <constraint firstItem="dpw-pD-ocn" firstAttribute="trailing" secondItem="HUc-B8-CUr" secondAttribute="trailing" id="J7u-8d-tAj"/>
+                            <constraint firstItem="dpw-pD-ocn" firstAttribute="centerX" secondItem="HUc-B8-CUr" secondAttribute="centerX" id="NA0-rl-UWe"/>
+                            <constraint firstItem="StB-xH-WEk" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dpw-pD-ocn" secondAttribute="bottom" constant="16" id="SiC-l6-mO2"/>
+                            <constraint firstItem="MYz-rX-Mr7" firstAttribute="centerX" secondItem="StB-xH-WEk" secondAttribute="centerX" id="YGy-yA-uME"/>
+                            <constraint firstItem="MYz-rX-Mr7" firstAttribute="leading" secondItem="NxE-nE-cdv" secondAttribute="leading" id="iNm-X7-1aG"/>
+                            <constraint firstAttribute="trailing" secondItem="MYz-rX-Mr7" secondAttribute="trailing" id="kk0-oD-DoB"/>
+                            <constraint firstItem="HUc-B8-CUr" firstAttribute="top" secondItem="mAk-SD-pVw" secondAttribute="bottom" constant="16" id="mpG-S2-kYf"/>
+                            <constraint firstItem="MYz-rX-Mr7" firstAttribute="top" secondItem="NxE-nE-cdv" secondAttribute="top" id="vsH-wD-eA3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="StB-xH-WEk"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="mAk-SD-pVw" id="uD0-gZ-Qqp"/>
+                        <outlet property="passwordTextField" destination="HUc-B8-CUr" id="7Lz-Jt-dw3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NhF-ZN-0V3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="-42.1875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cinemaRegistro" width="960" height="480"/>
+    </resources>
+</document>
