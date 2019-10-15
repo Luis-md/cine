@@ -14,7 +14,12 @@ target 'cineApp' do
   pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
 	pod 'Alamofire'
-  pod 'Realm'
+  pod 'AlamofireObjectMapper'
+  pod 'RealmSwift'
   pod 'SwiftGen', '= 5.3.0'
+  pod 'ProgressHUD'
+  pod 'Kingfisher'
+  pod 'Reusable'
+  pod 'ObjectMapper'
 
 end

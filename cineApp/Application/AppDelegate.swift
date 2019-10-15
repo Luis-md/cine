@@ -8,9 +8,13 @@
 
 import UIKit
 import Firebase
+import RealmSwift
 
-let baseUrl = "https://api.themoviedb.org/3/movie/"
+let baseUrl = "https://api.themoviedb.org/3"
 let apiKey = "e6a0bb4b36db22f170511e1bd3b86e5a"
+let imgUrl = "https://image.tmdb.org/t/p/original"
+
+var uiRealm: Realm!
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        do {
+            try uiRealm = Realm()
+        } catch {
+            print("Erro no Realm")
+        }
+        
+        print("DOCUMENTS: ", Realm.Configuration.defaultConfiguration.fileURL ?? "")
         
         FirebaseApp.configure()
         

@@ -63,6 +63,11 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<UIViewController>(storyboard: LaunchScreen.self)
   }
+  internal enum ListaFilmes: StoryboardType {
+    internal static let storyboardName = "ListaFilmes"
+
+    internal static let listaFilmesViewController = SceneType<cineApp.ListaFilmesViewController>(storyboard: ListaFilmes.self, identifier: "ListaFilmesViewController")
+  }
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
 

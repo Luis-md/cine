@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import ProgressHUD
 
 class ViewController: UIViewController {
 
@@ -27,6 +30,26 @@ class ViewController: UIViewController {
 
     @IBAction func loginBtn(_ sender: Any) {
         
+        guard let email = self.emailField.text, let password = self.passwordField.text else {
+            print("Preencha os campos de email e senha")
+            return
+        }
+    
+        ProgressHUD.show()
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let strongSelf = self else { return }
+            
+            
+            print(strongSelf)
+            ProgressHUD.dismiss()
+            if let error = error {
+                print("Erro na aplicacao ->  \(error.localizedDescription)")
+            } else {
+                let controller = StoryboardScene.ListaFilmes.listaFilmesViewController.instantiate()
+                self?.navigationController?.pushViewController(controller, animated: true)
+            }
+        }
     }
     
     @IBAction func criarConta(_ sender: Any) {
