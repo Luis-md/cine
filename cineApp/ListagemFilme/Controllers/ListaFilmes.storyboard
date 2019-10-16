@@ -48,6 +48,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oaf-Vx-zVh"/>
                     </view>
+                    <connections>
+                        <outlet property="filmeCollectionView" destination="uMC-pV-Bfk" id="up4-HX-iym"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNd-fM-m5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

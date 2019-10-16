@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import Reusable
+import Kingfisher
 
-class FilmeCollectionViewCell: UICollectionViewCell {
+class FilmeCollectionViewCell: UICollectionViewCell, NibReusable {
     @IBOutlet weak var poster: UIImageView!
     @IBOutlet weak var titulo: UILabel!
     @IBOutlet weak var nota: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+    }
+    
+    func bind (filme: FilmeView) {
+        
+        self.titulo.text = filme.titulo
+        self.nota.text = String(filme.nota)
+        self.poster.kf.setImage(with: filme.imgURL)
     }
 
 }

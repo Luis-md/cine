@@ -32,7 +32,11 @@ class FilmeService {
                 
                 if let filmes = response.result.value {
                     print(filmes)
+                    try? uiRealm.write {
+                        uiRealm.add(filmes)
+                    }
                 }
+                
                 self.delegate.success()
                 
             case .failure(let error):
