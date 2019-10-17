@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oS9-4v-cuW" secondAttribute="trailing" id="CUB-bW-shs"/>
                             <constraint firstItem="oS9-4v-cuW" firstAttribute="top" secondItem="Umf-1P-ood" secondAttribute="bottom" constant="-302" id="ID4-tf-JgQ"/>

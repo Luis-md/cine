@@ -15,7 +15,6 @@ class ListaFilmesViewController: UIViewController {
     var filmeService: FilmeService!
     var filmes: [FilmeView] = []
     var pagina: Int = 1
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +36,8 @@ class ListaFilmesViewController: UIViewController {
         view.backgroundColor = .black
         self.filmeCollectionView.backgroundColor = .black
         
+        self.navigationItem.setHidesBackButton(true, animated: false)
+
     }
     
 
@@ -78,5 +79,13 @@ extension ListaFilmesViewController : UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (view.frame.width - 30)/2, height: (view.frame.width - 100) )
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        let ultimoItem = filmes.count - 1
+        if indexPath.row == ultimoItem {
+            self.pagina += 1
+            self.filmeService.getFilmes(pesquisa: "A", paginacao: pagina)
+        }
+    }
 }
