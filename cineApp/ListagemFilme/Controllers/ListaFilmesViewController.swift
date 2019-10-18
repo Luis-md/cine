@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 class ListaFilmesViewController: UIViewController {
@@ -93,8 +94,20 @@ extension ListaFilmesViewController : UICollectionViewDelegate, UICollectionView
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewController = StoryboardScene.FilmeDetalhe.filmeDetalhe.instantiate()
+        viewController.modalPresentationStyle = .overFullScreen
+        viewController.lancamento = self.filmes[indexPath.row].lancamento
+        viewController.titulo = self.filmes[indexPath.row].titulo
+        viewController.nota = String(self.filmes[indexPath.row].nota)
+        viewController.sinopse = self.filmes[indexPath.row].resumo
+        
+        self.present(viewController, animated: true, completion: nil)
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width - 30)/2, height: (view.frame.width - 100) )
+        return CGSize(width: (view.frame.width - 20)/2, height: (view.frame.width - 50) )
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

@@ -58,6 +58,11 @@ internal enum StoryboardScene {
 
     internal static let criarContaViewController = SceneType<cineApp.CriarContaViewController>(storyboard: CriarConta.self, identifier: "CriarContaViewController")
   }
+  internal enum FilmeDetalhe: StoryboardType {
+    internal static let storyboardName = "FilmeDetalhe"
+
+    internal static let filmeDetalhe = SceneType<cineApp.FilmeDetalhe>(storyboard: FilmeDetalhe.self, identifier: "FilmeDetalhe")
+  }
   internal enum LaunchScreen: StoryboardType {
     internal static let storyboardName = "LaunchScreen"
 
