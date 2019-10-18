@@ -181,6 +181,13 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		89A97C3A2358ECFE0032BFE6 /* FilmeDetalhe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FilmeDetalhe;
+			sourceTree = "<group>";
+		};
 		89B632D6234FB6C100018607 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +209,7 @@
 		89B632E1234FB6C100018607 /* cineApp */ = {
 			isa = PBXGroup;
 			children = (
+				89A97C3A2358ECFE0032BFE6 /* FilmeDetalhe */,
 				89B632EE234FB6C200018607 /* Info.plist */,
 				894464B22354EA90000610F3 /* GoogleService-Info.plist */,
 				89B632F8234FBFF900018607 /* Application */,

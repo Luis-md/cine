@@ -11,8 +11,8 @@ import Alamofire
 import AlamofireObjectMapper
 
 protocol FilmeServiceDelegate {
-    func success()
-    func failure(erro: String)
+    func success(isFinished: Bool)
+    func failure(erro: String, isFinished: Bool)
 }
 
 class FilmeService {
@@ -25,22 +25,28 @@ class FilmeService {
     }
     
     func getFilmes(pesquisa: String, paginacao: Int) {
+        
         FilmeRequestFactory.getFilmes(busca: pesquisa, pagina: paginacao).validate().responseArray(keyPath: "results", completionHandler: { (response: DataResponse<[Filme]>) in
             
             switch response.result {
             case .success:
                 
                 if let filmes = response.result.value {
-                    print(filmes)
+                    
                     try? uiRealm.write {
+                        if paginacao == 1 {
+                            uiRealm.delete(uiRealm.objects(Filme.self))
+                        }
                         uiRealm.add(filmes)
                     }
+                    self.delegate.success(isFinished: filmes.isEmpty)
+                } else {
+                    self.delegate.success(isFinished: true)
                 }
                 
-                self.delegate.success()
                 
             case .failure(let error):
-                self.delegate.failure(erro: error.localizedDescription)
+                self.delegate.failure(erro: error.localizedDescription, isFinished: true)
             }
             
         })

@@ -10,12 +10,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cineApp/ListagemFilme/Controllers/ListaFilmesViewController.swift"
-            timestampString = "593026872.9925719"
+            timestampString = "593115345.954819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "success()"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "success(isFinished:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cineApp/ListagemFilme/Service/FilmeService.swift"
+            timestampString = "593115345.955274"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getFilmes(pesquisa:paginacao:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cineApp.FilmeService.getFilmes(pesquisa: Swift.String, paginacao: Swift.Int) -&gt; ()"
+                  moduleName = "cineApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luis_md/Desktop/temp/cineApp/cineApp/ListagemFilme/Service/FilmeService.swift"
+                  timestampString = "593114863.836181"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;cineApp.Filme&gt;&gt;) -&gt; () in cineApp.FilmeService.getFilmes(pesquisa: Swift.String, paginacao: Swift.Int) -&gt; ()"
+                  moduleName = "cineApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luis_md/Desktop/temp/cineApp/cineApp/ListagemFilme/Service/FilmeService.swift"
+                  timestampString = "593114863.839889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cineApp/ListagemFilme/Service/FilmeService.swift"
+            timestampString = "593115345.955339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getFilmes(pesquisa:paginacao:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cineApp/ListagemFilme/Service/FilmeService.swift"
+            timestampString = "593115345.9554"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getFilmes(pesquisa:paginacao:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

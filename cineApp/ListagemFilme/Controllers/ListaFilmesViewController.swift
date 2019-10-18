@@ -15,19 +15,34 @@ class ListaFilmesViewController: UIViewController {
     var filmeService: FilmeService!
     var filmes: [FilmeView] = []
     var pagina: Int = 1
-
+    var searchTimer: Timer?
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    var letra = "A"
+    
+    var isFinished = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.filmeService = FilmeService(delegate: self)
+        
+        self.title = "Filmes"
+        
+        self.searchController.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.searchBar.placeholder = "Procurar filmes"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
+        self.searchController.searchBar.delegate = self
         
         self.filmeCollectionView.delegate = self
         self.filmeCollectionView.dataSource = self
         
         self.filmeCollectionView.register(cellType: FilmeCollectionViewCell.self)
         
-        self.filmeService.getFilmes(pesquisa: "A", paginacao: 1)
-        // Do any additional setup after loading the view.
+        self.filmeService.getFilmes(pesquisa: self.letra, paginacao: 1)
         self.filmes = FilmeViewModel.getFilmes()
 
         let layout = UICollectionViewFlowLayout()
@@ -45,13 +60,15 @@ class ListaFilmesViewController: UIViewController {
 }
 
 extension ListaFilmesViewController : FilmeServiceDelegate {
-    func success() {
+    
+    func success(isFinished: Bool) {
+        self.isFinished = isFinished
         self.filmes = FilmeViewModel.getFilmes()
         print(filmes)
         self.filmeCollectionView.reloadData()
     }
     
-    func failure(erro: String) {
+    func failure(erro: String, isFinished: Bool) {
         print(erro)
     }
     
@@ -83,9 +100,39 @@ extension ListaFilmesViewController : UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
         let ultimoItem = filmes.count - 1
-        if indexPath.row == ultimoItem {
+        if indexPath.row == ultimoItem && !self.isFinished {
             self.pagina += 1
-            self.filmeService.getFilmes(pesquisa: "A", paginacao: pagina)
+            self.filmeService.getFilmes(pesquisa: self.letra, paginacao: pagina)
         }
     }
 }
+
+extension ListaFilmesViewController : UISearchControllerDelegate, UISearchBarDelegate {
+    
+    func willDismissSearchController(_ searchController: UISearchController) {
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        self.searchTimer?.invalidate()
+        
+        if let text = searchController.searchBar.text {
+            
+            self.searchTimer = Timer.scheduledTimer(timeInterval: 0.7, target: self,
+                                                    selector: #selector(ListaFilmesViewController.search(_:)),
+                                                    userInfo: text,
+                                                    repeats: false)
+        }
+    }
+    
+    @objc func search(_ timer: Timer) {
+        if let text = timer.userInfo as? String {
+            self.letra = text
+            self.filmeService.getFilmes(pesquisa: self.letra, paginacao: 1)
+        }
+    }
+
+}
+
+
