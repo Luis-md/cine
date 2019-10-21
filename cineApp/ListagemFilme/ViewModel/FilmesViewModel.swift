@@ -83,4 +83,11 @@ class FilmeViewModel {
         
         return self.getAsView(filmes: self.get())
     }
+    
+    //----------------
+    
+    static func getFilme(by id: Int) -> FilmeView {
+            let filme = uiRealm.object(ofType: Filme.self, forPrimaryKey: id)
+            return self.getAsView(filme: filme)
+    }
 }

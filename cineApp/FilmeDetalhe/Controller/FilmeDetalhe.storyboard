@@ -146,7 +146,6 @@
                         <outlet property="poster" destination="h3i-uL-hJc" id="i3N-FZ-DWt"/>
                         <outlet property="sinopseLabel" destination="9gj-qP-sHV" id="1RD-fh-N0e"/>
                         <outlet property="tituloLabel" destination="PU1-F4-kXM" id="ZB9-Ig-gBW"/>
-                        <outlet property="viewContent" destination="lrY-pY-nR7" id="qVE-tu-GCS"/>
                         <outlet property="viewTransparente" destination="iBM-RP-YqR" id="1Uj-yF-WUi"/>
                     </connections>
                 </viewController>

@@ -97,10 +97,7 @@ extension ListaFilmesViewController : UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let viewController = StoryboardScene.FilmeDetalhe.filmeDetalhe.instantiate()
         viewController.modalPresentationStyle = .overFullScreen
-        viewController.lancamento = self.filmes[indexPath.row].lancamento
-        viewController.titulo = self.filmes[indexPath.row].titulo
-        viewController.nota = String(self.filmes[indexPath.row].nota)
-        viewController.sinopse = self.filmes[indexPath.row].resumo
+        viewController.filmeDet = FilmeViewModel.getFilme(by: filmes[indexPath.row].id)
         
         self.present(viewController, animated: true, completion: nil)
         

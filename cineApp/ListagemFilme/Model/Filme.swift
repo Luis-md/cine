@@ -19,13 +19,14 @@ class Filme: Object, Mappable {
     var nota = RealmOptional<Double>()
     @objc dynamic var img: String?
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     
     required convenience init?(map: Map) {
         
         self.init()
     }
-    
-
     
     func mapping(map: Map) {
         

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cineApp/ListagemFilme/Controllers/ListaFilmesViewController.swift"
-            timestampString = "593125076.966553"
+            timestampString = "593374728.2943881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cineApp/ListagemFilme/Service/FilmeService.swift"
-            timestampString = "593125076.966647"
+            timestampString = "593374728.2944731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -42,7 +42,7 @@
                   moduleName = "cineApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luis_md/Desktop/temp/cineApp/cineApp/ListagemFilme/Service/FilmeService.swift"
-                  timestampString = "593123541.174037"
+                  timestampString = "593374617.718099"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -57,7 +57,7 @@
                   moduleName = "cineApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luis_md/Desktop/temp/cineApp/cineApp/ListagemFilme/Service/FilmeService.swift"
-                  timestampString = "593123541.177904"
+                  timestampString = "593374617.721866"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cineApp/ListagemFilme/Service/FilmeService.swift"
-            timestampString = "593125076.966717"
+            timestampString = "593374728.29454"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -90,12 +90,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cineApp/ListagemFilme/Service/FilmeService.swift"
-            timestampString = "593125076.966784"
+            timestampString = "593374728.294601"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "getFilmes(pesquisa:paginacao:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cineApp/ListagemFilme/ViewModel/FilmesViewModel.swift"
+            timestampString = "593374728.294664"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "getFilme(by:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
