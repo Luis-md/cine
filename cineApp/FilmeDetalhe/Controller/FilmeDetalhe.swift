@@ -15,9 +15,9 @@ class FilmeDetalhe: UIViewController {
     @IBOutlet weak var lancamentoLabel: UILabel!
     @IBOutlet weak var notaLabel: UILabel!
     @IBOutlet weak var poster: UIImageView!
-    @IBOutlet weak var viewTransparente: UIView!
     
     var filmeDet: FilmeView?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class FilmeDetalhe: UIViewController {
             self.poster.kf.setImage(with: filme.imgURL)
         }
         
-        self.viewTransparente.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        //self.viewTransparente.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         
         self.hideViewController()
     }

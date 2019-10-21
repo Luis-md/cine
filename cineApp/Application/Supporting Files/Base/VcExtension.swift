@@ -40,7 +40,9 @@ extension UIViewController {
     }
     
     func hideViewController() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismiss))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismiss)
+        
+        )
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
