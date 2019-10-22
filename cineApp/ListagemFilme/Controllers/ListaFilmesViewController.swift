@@ -99,7 +99,12 @@ extension ListaFilmesViewController : UICollectionViewDelegate, UICollectionView
         viewController.modalPresentationStyle = .overFullScreen
         viewController.filmeDet = FilmeViewModel.getFilme(by: filmes[indexPath.row].id)
         
-        self.present(viewController, animated: true, completion: nil)
+//        self.present(UINavigationController(rootViewController: viewController), animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true
+        
+        
+        
+        )
         
     }
     
